@@ -6,7 +6,9 @@ services:
     restart: always
     ports:
      - "25:25"
-    environment:
+    networks:
+      - mail
+     # environment:
      # # MUST start with : e.g RELAY_NETWORKS=:192.168.0.0/24:10.0.0.0/16
      # # if acting as a relay this or RELAY_DOMAINS must be filled out or incoming mail will be rejected
      # - RELAY_NETWORKS= :192.168.0.0/24
